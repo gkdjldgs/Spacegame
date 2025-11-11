@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqow47bch5ocs"]
+
+[ext_resource type="Texture2D" uid="uid://cirmmt8vl31d4" path="res://images/planet.png" id="1_q753v"]
+[ext_resource type="Texture2D" uid="uid://bkqv5mmp0ataj" path="res://images/icon.jpg" id="2_0aq6d"]
+[ext_resource type="Script" uid="uid://dtfwvgkai6iy5" path="res://scripts/character_body_2d.gd" id="2_irwmq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q753v"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Planet" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(-4.0000305, 0)
+scale = Vector2(2.7392344, 2.7392342)
+texture = ExtResource("1_q753v")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_irwmq")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(21.945, 21.945)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+scale = Vector2(0.325, 0.325)
+shape = SubResource("CapsuleShape2D_q753v")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(0.037109375, 0.037109375)
+texture = ExtResource("2_0aq6d")
