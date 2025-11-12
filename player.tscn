@@ -11,7 +11,7 @@
 script = ExtResource("1_onrkg")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-zoom = Vector2(14.36, 14.36)
+zoom = Vector2(7.46, 7.46)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 scale = Vector2(0.325, 0.325)
@@ -21,3 +21,6 @@ shape = SubResource("CapsuleShape2D_hqtel")
 rotation = 1.5707964
 scale = Vector2(0.0107421875, 0.0107421875)
 texture = ExtResource("2_i3pqv")
+
+[node name="Marker2D" type="Marker2D" parent="CharacterBody2D"]
+position = Vector2(5, 0)
