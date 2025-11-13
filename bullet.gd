@@ -1,9 +1,9 @@
 extends Area2D
 
-@export var speed := 300
+@export var speed := 5
 var direction := Vector2(0,0)
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if direction != Vector2.ZERO:
 		var velocity = direction * speed
 		

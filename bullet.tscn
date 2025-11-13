@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://jdkxlojwponk" path="res://bullet.gd" id="1_v8qja"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t4vbm"]
-radius = 106.99983
+radius = 146.10272
 
 [node name="Node2D" type="Area2D"]
 scale = Vector2(0.117, 0.117)
@@ -16,6 +16,6 @@ scale = Vector2(0.117, 0.117)
 texture = ExtResource("1_v7oki")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, 0)
+position = Vector2(8.5470085, 0)
 scale = Vector2(0.117, 0.117)
 shape = SubResource("CircleShape2D_t4vbm")

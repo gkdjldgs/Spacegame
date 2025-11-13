@@ -1,5 +1,5 @@
 extends CharacterBody2D
-@onready var bullet:PackedScene
+@export var bullet = preload('res://bullet.tscn')
 @onready var gunend = $Marker2D
 var speed = 30
 func _process(delta: float) -> void:
@@ -21,10 +21,11 @@ func _physics_process(delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_released("click"):
 		shoot()
+		
 func shoot():
-	var clone = bullet.instantiate()
-	add_child(clone)
-	clone.global_position = gunend.global_position
+	var bullet_instance = bullet.instantiate()
+	add_child(bullet_instance)
+	bullet_instance.global_position = gunend.global_position
 	var target = get_global_mouse_position()
-	var mirection = clone.globaL_position.direction_to(target).normalized()
-	clone.set_direction(mirection)
+	var mirection = bullet_instance.global_position.direction_to(target).normalized()
+	bullet_instance.set_direction(mirection)
