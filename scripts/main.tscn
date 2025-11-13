@@ -5,7 +5,7 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Planet" type="Sprite2D" parent="."]
+[node name="Plaet" type="Sprite2D" parent="."]
 texture_filter = 3
 position = Vector2(-4.0000305, 0)
 scale = Vector2(2.7392344, 2.7392342)
