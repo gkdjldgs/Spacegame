@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var speed := 5
+@export var speed := 3.5
 var direction := Vector2(0,0)
 
 func _physics_process(delta: float) -> void:
@@ -12,3 +12,7 @@ func _physics_process(delta: float) -> void:
 func set_direction(direction: Vector2):
 	self.direction = direction
 	rotation += direction.angle()
+
+
+func _on_timer_timeout() -> void:
+	self.queue_free()
