@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://blyusjbdydqg5" path="res://scripts/main.gd" id="1_irwmq"]
 [ext_resource type="Texture2D" uid="uid://cirmmt8vl31d4" path="res://images/planet.png" id="1_q753v"]
-[ext_resource type="PackedScene" uid="uid://bsvpoele1p08m" path="res://scripts/character_body_2d.tscn" id="4_0nr8p"]
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="2_0aq6d"]
 [ext_resource type="Script" uid="uid://b538ebb8m1t4j" path="res://scripts/manager.gd" id="4_hakmx"]
 
 [node name="Node2D" type="Node2D"]
@@ -14,6 +14,8 @@ position = Vector2(-4.0000305, 0)
 scale = Vector2(2.7392344, 2.7392342)
 texture = ExtResource("1_q753v")
 
+[node name="Node2D" parent="." instance=ExtResource("2_0aq6d")]
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
@@ -23,4 +25,4 @@ polygon = PackedVector2Array(-23, 287, 18, 287, 53, 280, 90, 267, 123, 250, 152,
 [node name="Manager" type="Node" parent="."]
 script = ExtResource("4_hakmx")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("4_0nr8p")]
+[node name="player" parent="." instance=ExtResource("2_0aq6d")]
