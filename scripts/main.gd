@@ -1,6 +1,6 @@
 extends Node2D
 @onready var bullet_manager = $Manager
-@onready var player = $CharacterBody2D
+@onready var player = $Player
 	
 func _ready() -> void:
 	player.connect("bulletfired",bullet_manager.handle_bullet_spawned)

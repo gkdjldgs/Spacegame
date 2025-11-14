@@ -1,3 +1,21 @@
-[gd_scene format=3 uid="uid://2oqfqxx5b61g"]
+[gd_scene load_steps=4 format=3 uid="uid://2oqfqxx5b61g"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Script" uid="uid://c4kqr3abi6wjh" path="res://enemy.gd" id="1_4gyqm"]
+[ext_resource type="Texture2D" uid="uid://b2e7qgqnovvqe" path="res://images/ufo.png" id="1_7k104"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4gyqm"]
+radius = 259259.28
+height = 592592.6
+
+[node name="Node2D" type="Area2D"]
+script = ExtResource("1_4gyqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("1_7k104")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+scale = Vector2(2.6999998e-05, 2.6999998e-05)
+shape = SubResource("CapsuleShape2D_4gyqm")

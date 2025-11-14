@@ -16,3 +16,12 @@ func set_direction(direction: Vector2):
 
 func _on_timer_timeout() -> void:
 	self.queue_free()
+
+
+
+
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.has_method('handle_hit'):
+		area.handle_hit()
+		self.queue_free()
