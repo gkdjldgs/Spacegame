@@ -20,7 +20,6 @@ func _process(delta: float) -> void:
 		State.ATTACK:
 			if player != null:
 				print('wow')
-				clone.rotate(990)
 		_:
 			pass
 			print('nostateforenemy')

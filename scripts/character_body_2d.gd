@@ -2,6 +2,7 @@ extends CharacterBody2D
 @export var bullet = preload('res://bullet.tscn')
 @onready var gunend = $Marker2D
 @onready var gundirection = $Marker2D2
+@onready var AttackCooldown = $Timer
 signal bulletfired(bullet,position,direction)
 var speed = 30
 var health = 3
@@ -26,9 +27,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		shoot()
 		
 func shoot():
-	var bullet_instance = bullet.instantiate()
-	var direction = (gundirection.global_position - gunend.global_position).normalized()
-	emit_signal("bulletfired",bullet_instance,gunend.global_position,direction)
-
+	if AttackCooldown.is_stopped():
+		var bullet_instance = bullet.instantiate()
+		var direction = (gundirection.global_position - gunend.global_position).normalized()
+		emit_signal("bulletfired",bullet_instance,gunend.global_position,direction)
+		AttackCooldown.start()
+	else:
+		pass
+		
 func player_hit():
 	health -= 1

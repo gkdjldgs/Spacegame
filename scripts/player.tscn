@@ -35,3 +35,7 @@ texture_filter = 1
 position = Vector2(5.1601267, 0.5762062)
 scale = Vector2(0.016414132, 0.016414141)
 texture = ExtResource("3_2c7ny")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
