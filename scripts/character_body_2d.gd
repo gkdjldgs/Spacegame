@@ -1,11 +1,12 @@
 extends CharacterBody2D
-@export var bullet = preload('res://bullet.tscn')
+class_name Player
+@export var bullet = preload('res://scripts/bullet.tscn')
 @onready var gunend = $Marker2D
 @onready var gundirection = $Marker2D2
 @onready var AttackCooldown = $Timer
 signal bulletfired(bullet,position,direction)
 var speed = 30
-var health = 3
+@onready var health = $"health"
 func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())
 
@@ -36,4 +37,4 @@ func shoot():
 		pass
 		
 func player_hit():
-	health -= 1
+	health.health -= 1

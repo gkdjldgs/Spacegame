@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bsvpoele1p08m" path="res://scripts/character_body_2d.tscn" id="4_0nr8p"]
 [ext_resource type="Script" uid="uid://b538ebb8m1t4j" path="res://scripts/manager.gd" id="4_hakmx"]
 [ext_resource type="Script" uid="uid://cik3rnsqebmn8" path="res://scripts/autoload.gd" id="5_0nr8p"]
-[ext_resource type="PackedScene" uid="uid://2oqfqxx5b61g" path="res://enemy.tscn" id="6_kv812"]
+[ext_resource type="PackedScene" uid="uid://2oqfqxx5b61g" path="res://scripts/enemy.tscn" id="6_kv812"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_irwmq")
