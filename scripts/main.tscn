@@ -19,14 +19,13 @@ texture = ExtResource("1_q753v")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-visible = false
 build_mode = 1
 polygon = PackedVector2Array(-23, 287, 18, 287, 53, 280, 90, 267, 123, 250, 152, 231, 187, 198, 208, 170, 229, 133, 247, 75, 248, 60, 248, 1, 242, -26, 232, -57, 217, -90, 199, -120, 183, -139, 165, -158, 145, -172, 103, -197, 73, -209, 41, -216, 19, -221, -17, -221, -38, -219, -57, -216, -72, -212, -96, -203, -111, -197, -149, -176, -179, -153, -202, -128, -220, -101, -240, -65, -253, -24, -259, 5, -259, 64, -253, 93, -246, 116, -234, 145, -220, 170, -199, 196, -188, 208, -170, 227, -157, 236, -143, 246, -129, 255, -112, 263, -89, 272, -65, 280, -45, 284, -31, 287)
 
 [node name="Manager" type="Node" parent="."]
 script = ExtResource("4_hakmx")
 
-[node name="Player" parent="." instance=ExtResource("4_0nr8p")]
+[node name="Player" parent="." groups=["player"] instance=ExtResource("4_0nr8p")]
 
 [node name="autoload" type="Node" parent="."]
 script = ExtResource("5_0nr8p")

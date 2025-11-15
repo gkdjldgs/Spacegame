@@ -9,7 +9,7 @@ radius = 259259.28
 height = 592592.6
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qi2p4"]
-radius = 59.03389
+radius = 64.070274
 
 [node name="Node2D" type="Area2D"]
 script = ExtResource("1_4gyqm")
