@@ -30,5 +30,5 @@ func shoot():
 	var direction = (gundirection.global_position - gunend.global_position).normalized()
 	emit_signal("bulletfired",bullet_instance,gunend.global_position,direction)
 
-func handle_hit():
-	print("OW")
+func player_hit():
+	health -= 1

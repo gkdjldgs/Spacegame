@@ -3,20 +3,24 @@ extends Node2D
 signal state_changed(new_state)
 @onready var player = null
 
+@onready var clone = $NODE2D
 enum State{
 	LOOK,
 	ATTACK
 }
+
+var target: CharacterBody2D
 
 var current_state: int = State.LOOK: set = set_state
 
 func _process(delta: float) -> void:
 	match current_state:
 		State.LOOK:
-			pass
+			print('sad')
 		State.ATTACK:
 			if player != null:
-				pass
+				print('wow')
+				clone.rotate(990)
 		_:
 			pass
 			print('nostateforenemy')
