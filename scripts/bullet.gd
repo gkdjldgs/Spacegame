@@ -31,3 +31,5 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.has_method('player_hit'):
 		body.player_hit()
 		self.queue_free()
+	else:
+		pass

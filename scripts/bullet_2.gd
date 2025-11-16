@@ -25,3 +25,4 @@ func _on_area_entered(area: Area2D) -> void:
 	if area.has_method('handle_hit'):
 		area.handle_hit()
 		self.queue_free()
+	

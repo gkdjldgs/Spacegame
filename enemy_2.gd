@@ -1,12 +1,21 @@
-extends Area2D
+extends CharacterBody2D
 
-@onready var player = preload("res://scripts/player.tscn")
+const speed = 25
+
+@onready var navigationagent : NavigationAgent2D = $NavigationAgent2D
+@export var chase: CharacterBody2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	set_physics_process(false)
+	call_deferred('wait')
+func wait():
+	await get_tree().physics_frame
+	set_physics_process(true)
+		
 
-const speed = 10
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	var velocity = (autoload.player_position - self.global_position).normalized() * speed
-	print(velocity)
+	navigationagent.target_position = autoload.player_position
+	velocity = global_position.direction_to(navigationagent.get_next_path_position()) * speed
+	move_and_slide()

@@ -5,8 +5,12 @@
 [ext_resource type="Script" uid="uid://b538ebb8m1t4j" path="res://scripts/manager.gd" id="4_hakmx"]
 [ext_resource type="Script" uid="uid://cik3rnsqebmn8" path="res://scripts/autoload.gd" id="5_0nr8p"]
 [ext_resource type="PackedScene" uid="uid://ccfhqh8b837fa" path="res://scripts/player.tscn" id="6_ocx4e"]
-[ext_resource type="PackedScene" uid="uid://bpfamqmjb7h2i" path="res://enemy2.tscn" id="7_dkw4t"]
 [ext_resource type="Texture2D" uid="uid://dl2834cy3gfk8" path="res://images/starry bg.jpg" id="7_ocx4e"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_kv812"]
+vertices = PackedVector2Array(-221, -107.63281, -195.95313, -155.8125, -153.00781, -194.92969, -125.53906, -211.60938, -0.078125, -245.99219, 51.9375, -243.10156, 106.27344, -223.07813, 156.25, -187.52344, 202.49219, -134.53906, 225.60938, -83.46875, 240, -35.53125, 240, 15.953125, 230.36719, 61.203125, 211.0625, 114.296875, 187.36719, 147.46094, 149.77344, 184.10156, 107.63281, 210.92188, 50.507813, 230.28125, 0.359375, 238.96094, -21.0625, 238.03125, -70.1875, 231.28125, -117.92969, 209.32031, -161.24219, 178.52344, -200.75781, 133.21875, -232.65625, 75.21875, -245.02344, 30.546875, -245.97656, -25.203125, -237.39063, -73.86719, -103.46875, -226.96094, -49.28125, -245.02344)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27), PackedInt32Array(28, 29, 4, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1, 249, 53, 240, 112, 220, 156, 192, 195, 154, 220, 119, 240, 64, 250, 17, 250, -37, 235, -87, 211, -140, 163, -195, 111, -232, 54, -253, 0, -256, -51, -255, -108, -236, -131, -220, -159, -203, -204, -162, -230, -112, -247, -77, -256, -26, -255, 32, -242, 79, -209, 139, -168, 186, -123, 218, -73, 241, -22, 248)])
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_irwmq")
@@ -40,5 +44,5 @@ script = ExtResource("5_0nr8p")
 [node name="player" parent="." instance=ExtResource("6_ocx4e")]
 position = Vector2(-3, 12)
 
-[node name="Area2D" parent="." instance=ExtResource("7_dkw4t")]
-position = Vector2(-6, -20)
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_kv812")
