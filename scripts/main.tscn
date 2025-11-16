@@ -2,16 +2,16 @@
 
 [ext_resource type="Script" uid="uid://blyusjbdydqg5" path="res://scripts/main.gd" id="1_irwmq"]
 [ext_resource type="Texture2D" uid="uid://cirmmt8vl31d4" path="res://images/planet.png" id="1_q753v"]
-[ext_resource type="PackedScene" uid="uid://bsvpoele1p08m" path="res://scripts/character_body_2d.tscn" id="4_0nr8p"]
 [ext_resource type="Script" uid="uid://b538ebb8m1t4j" path="res://scripts/manager.gd" id="4_hakmx"]
 [ext_resource type="Script" uid="uid://cik3rnsqebmn8" path="res://scripts/autoload.gd" id="5_0nr8p"]
 [ext_resource type="PackedScene" uid="uid://2oqfqxx5b61g" path="res://scripts/enemy.tscn" id="6_kv812"]
+[ext_resource type="PackedScene" uid="uid://ccfhqh8b837fa" path="res://scripts/player.tscn" id="6_ocx4e"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_irwmq")
 
 [node name="Planet" type="Sprite2D" parent="."]
-texture_filter = 3
+texture_filter = 1
 position = Vector2(-4.0000305, 0)
 scale = Vector2(2.7392344, 2.7392342)
 texture = ExtResource("1_q753v")
@@ -25,10 +25,10 @@ polygon = PackedVector2Array(-23, 287, 18, 287, 53, 280, 90, 267, 123, 250, 152,
 [node name="Manager" type="Node" parent="."]
 script = ExtResource("4_hakmx")
 
-[node name="Player" parent="." groups=["player"] instance=ExtResource("4_0nr8p")]
-
 [node name="autoload" type="Node" parent="."]
 script = ExtResource("5_0nr8p")
 
 [node name="Enemy" parent="." instance=ExtResource("6_kv812")]
 position = Vector2(75, 10)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("6_ocx4e")]

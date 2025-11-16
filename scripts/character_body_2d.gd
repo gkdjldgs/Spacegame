@@ -1,12 +1,12 @@
 extends CharacterBody2D
 class_name Player
-@export var bullet = preload('res://scripts/bullet.tscn')
-@onready var gunend = $Marker2D
-@onready var gundirection = $Marker2D2
-@onready var AttackCooldown = $Timer
-signal bulletfired(bullet,position,direction)
+signal bulletfired(bullet, position, direction)
 var speed = 30
-@onready var health = $"health"
+@onready var health = $health
+@onready var weapon = $weapon
+
+func _ready() -> void:
+	weapon.connect('weapon_fired',shoot)
 func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())
 
@@ -25,16 +25,10 @@ func _physics_process(delta: float) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_released("click"):
-		shoot()
+		weapon.shoot()
 		
-func shoot():
-	if AttackCooldown.is_stopped():
-		var bullet_instance = bullet.instantiate()
-		var direction = (gundirection.global_position - gunend.global_position).normalized()
-		emit_signal("bulletfired",bullet_instance,gunend.global_position,direction)
-		AttackCooldown.start()
-	else:
-		pass
+func shoot(bullet, location: Vector2, direction: Vector2):
+	emit_signal('bulletfired',bullet, location, direction)
 		
 func player_hit():
 	health.health -= 1
