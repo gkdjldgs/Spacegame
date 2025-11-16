@@ -14,6 +14,7 @@ height = 592592.6
 radius = 82.02438
 
 [node name="Node2D" type="Area2D"]
+visible = false
 script = ExtResource("1_4gyqm")
 
 [node name="weapon" parent="." instance=ExtResource("2_wvybr")]

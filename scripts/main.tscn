@@ -4,12 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://cirmmt8vl31d4" path="res://images/planet.png" id="1_q753v"]
 [ext_resource type="Script" uid="uid://b538ebb8m1t4j" path="res://scripts/manager.gd" id="4_hakmx"]
 [ext_resource type="Script" uid="uid://cik3rnsqebmn8" path="res://scripts/autoload.gd" id="5_0nr8p"]
-[ext_resource type="PackedScene" uid="uid://2oqfqxx5b61g" path="res://scripts/enemy.tscn" id="6_kv812"]
 [ext_resource type="PackedScene" uid="uid://ccfhqh8b837fa" path="res://scripts/player.tscn" id="6_ocx4e"]
+[ext_resource type="PackedScene" uid="uid://bpfamqmjb7h2i" path="res://enemy2.tscn" id="7_dkw4t"]
 [ext_resource type="Texture2D" uid="uid://dl2834cy3gfk8" path="res://images/starry bg.jpg" id="7_ocx4e"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_irwmq")
+
+[node name="BG" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+position = Vector2(-52, -1.0000002)
+scale = Vector2(0.8370056, 0.8370056)
+texture = ExtResource("7_ocx4e")
 
 [node name="Planet" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -30,17 +37,8 @@ script = ExtResource("4_hakmx")
 [node name="autoload" type="Node" parent="."]
 script = ExtResource("5_0nr8p")
 
-[node name="Enemy" parent="." instance=ExtResource("6_kv812")]
-
 [node name="player" parent="." instance=ExtResource("6_ocx4e")]
-position = Vector2(142, -143)
+position = Vector2(-3, 12)
 
-[node name="Node2D" parent="." instance=ExtResource("6_kv812")]
-position = Vector2(97, -145)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = -1
-texture_filter = 1
-position = Vector2(-52, -1.0000002)
-scale = Vector2(0.8370056, 0.8370056)
-texture = ExtResource("7_ocx4e")
+[node name="Area2D" parent="." instance=ExtResource("7_dkw4t")]
+position = Vector2(-6, -20)

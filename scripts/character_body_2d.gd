@@ -7,6 +7,7 @@ var speed = 60
 
 
 func _process(delta: float) -> void:
+	autoload.player_position = self.global_position
 	look_at(get_global_mouse_position())
 	if health.health == 0:
 		pass
