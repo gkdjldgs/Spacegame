@@ -1,13 +1,12 @@
 extends Node2D
+class_name Weapon
 
 signal weapon_fired(bullet, location, direction)
 @export var bullet = preload('res://scripts/bullet.tscn')
-
 @onready var gunend = $Marker2D
 @onready var gundirection = $Marker2D2
 @onready var AttackCooldown = $Timer
 
-signal bulletfired(bullet,position,direction)
 
 func shoot():
 	if AttackCooldown.is_stopped():

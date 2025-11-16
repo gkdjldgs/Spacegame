@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6dm6cnrpjrlv"]
+
+[ext_resource type="Script" uid="uid://diedvam4pjps7" path="res://scripts/weapon.gd" id="1_5aaer"]
+
+[node name="weapon" type="Node2D"]
+script = ExtResource("1_5aaer")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(8, 0)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.35
+one_shot = true
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(9, 0)

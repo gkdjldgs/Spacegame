@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://2oqfqxx5b61g"]
+[gd_scene load_steps=8 format=3 uid="uid://2oqfqxx5b61g"]
 
 [ext_resource type="Script" uid="uid://c4kqr3abi6wjh" path="res://scripts/enemy.gd" id="1_4gyqm"]
 [ext_resource type="Texture2D" uid="uid://b2e7qgqnovvqe" path="res://images/ufo.png" id="1_7k104"]
+[ext_resource type="PackedScene" uid="uid://c6dm6cnrpjrlv" path="res://scripts/weapon.tscn" id="2_wvybr"]
 [ext_resource type="Script" uid="uid://dw8feumiuvki2" path="res://scripts/AI.gd" id="3_qi2p4"]
 [ext_resource type="PackedScene" uid="uid://8vaw3h13p0io" path="res://scripts/health.tscn" id="4_t1ujs"]
 
@@ -10,10 +11,16 @@ radius = 259259.28
 height = 592592.6
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qi2p4"]
-radius = 120.41595
+radius = 33.24154
 
 [node name="Node2D" type="Area2D"]
 script = ExtResource("1_4gyqm")
+
+[node name="weapon" parent="." instance=ExtResource("2_wvybr")]
+position = Vector2(-10, 8)
+
+[node name="health" parent="." instance=ExtResource("4_t1ujs")]
+health = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, 0)
@@ -28,12 +35,9 @@ shape = SubResource("CapsuleShape2D_4gyqm")
 [node name="AI" type="Node2D" parent="."]
 script = ExtResource("3_qi2p4")
 
-[node name="Area2D" type="Area2D" parent="AI"]
+[node name="Detectioner" type="Area2D" parent="AI" groups=["enemy"]]
 
-[node name="detection" type="CollisionShape2D" parent="AI/Area2D"]
+[node name="detection" type="CollisionShape2D" parent="AI/Detectioner"]
 shape = SubResource("CircleShape2D_qi2p4")
 
-[node name="health" parent="." instance=ExtResource("4_t1ujs")]
-health = 5
-
-[connection signal="body_entered" from="AI/Area2D" to="AI" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="AI/Detectioner" to="AI" method="_on_detectioner_body_entered"]

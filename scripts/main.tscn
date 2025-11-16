@@ -29,6 +29,10 @@ script = ExtResource("4_hakmx")
 script = ExtResource("5_0nr8p")
 
 [node name="Enemy" parent="." instance=ExtResource("6_kv812")]
-position = Vector2(75, 10)
+position = Vector2(-43, 25)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("6_ocx4e")]
+[node name="player" parent="." instance=ExtResource("6_ocx4e")]
+position = Vector2(10, 7)
+
+[node name="Node2D" parent="." instance=ExtResource("6_kv812")]
+position = Vector2(61, 19)
