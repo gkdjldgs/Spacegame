@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var speed := 3.5
+@export var speed := 1.0
 var direction := Vector2(0,0)
 
 func _physics_process(delta: float) -> void:
@@ -24,5 +24,10 @@ func _on_timer_timeout() -> void:
 func _on_area_entered(area: Area2D) -> void:
 	if area.has_method('handle_hit'):
 		area.handle_hit()
-		print('quack')
+		self.queue_free()
+
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.has_method('player_hit'):
+		body.player_hit()
 		self.queue_free()

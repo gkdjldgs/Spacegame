@@ -13,11 +13,12 @@ script = ExtResource("1_irwmq")
 
 [node name="Planet" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-4.0000305, 0)
+position = Vector2(-2.75, -37.552673)
 scale = Vector2(2.7392344, 2.7392342)
 texture = ExtResource("1_q753v")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(1.2500305, -37.552673)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 build_mode = 1
@@ -30,7 +31,6 @@ script = ExtResource("4_hakmx")
 script = ExtResource("5_0nr8p")
 
 [node name="Enemy" parent="." instance=ExtResource("6_kv812")]
-position = Vector2(140, -78)
 
 [node name="player" parent="." instance=ExtResource("6_ocx4e")]
 position = Vector2(142, -143)
@@ -41,6 +41,6 @@ position = Vector2(97, -145)
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -1
 texture_filter = 1
-position = Vector2(-63, 106)
+position = Vector2(-52, -1.0000002)
 scale = Vector2(0.8370056, 0.8370056)
 texture = ExtResource("7_ocx4e")

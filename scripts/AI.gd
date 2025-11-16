@@ -45,3 +45,12 @@ func _on_detectioner_body_entered(body: Node) -> void:
 		print('sad')
 		set_state(State.ATTACK)
 		player = body
+
+
+
+
+func _on_detectioner_body_exited(body: Node2D) -> void:
+	if body.is_in_group('play'):
+		set_state(State.LOOK)
+		player = body
+	
