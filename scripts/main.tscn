@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cqow47bch5ocs"]
+[gd_scene load_steps=9 format=3 uid="uid://cqow47bch5ocs"]
 
 [ext_resource type="Script" uid="uid://blyusjbdydqg5" path="res://scripts/main.gd" id="1_irwmq"]
 [ext_resource type="Texture2D" uid="uid://cirmmt8vl31d4" path="res://images/planet.png" id="1_q753v"]
 [ext_resource type="Script" uid="uid://b538ebb8m1t4j" path="res://scripts/manager.gd" id="4_hakmx"]
 [ext_resource type="Script" uid="uid://cik3rnsqebmn8" path="res://scripts/autoload.gd" id="5_0nr8p"]
 [ext_resource type="PackedScene" uid="uid://ccfhqh8b837fa" path="res://scripts/player.tscn" id="6_ocx4e"]
+[ext_resource type="PackedScene" uid="uid://bpfamqmjb7h2i" path="res://enemy2.tscn" id="7_dkw4t"]
 [ext_resource type="Texture2D" uid="uid://dl2834cy3gfk8" path="res://images/starry bg.jpg" id="7_ocx4e"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_kv812"]
@@ -46,3 +47,6 @@ position = Vector2(-3, 12)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_kv812")
+
+[node name="Enemy2" parent="." instance=ExtResource("7_dkw4t")]
+position = Vector2(-71, 63)
