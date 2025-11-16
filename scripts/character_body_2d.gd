@@ -28,4 +28,3 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 func player_hit():
 	health.health -= 1
-	
