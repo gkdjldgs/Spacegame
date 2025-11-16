@@ -3,7 +3,7 @@ extends Node2D
 signal state_changed(new_state)
 
 @onready var detection = $Detectioner
-@onready var clone = $NODE2D
+var actor = null
 
 var target: CharacterBody2D
 
@@ -22,13 +22,15 @@ func _process(delta: float) -> void:
 			pass
 		State.ATTACK:
 			if player != null and weapon != null:
+				actor.rotation = actor.global_position.direction_to(player.global_position).angle()
 				weapon.shoot()
 			else:
 				print('no weapon or player')
 		_:
 			print('nostateforenemy')
 			
-func set_weapon(weapon: Weapon):
+func initialize(actor, weapon: Weapon):
+	self.actor = actor
 	self.weapon = weapon
 
 func set_state(new_state: int):

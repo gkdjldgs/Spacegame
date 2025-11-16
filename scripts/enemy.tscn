@@ -17,13 +17,14 @@ radius = 33.24154
 script = ExtResource("1_4gyqm")
 
 [node name="weapon" parent="." instance=ExtResource("2_wvybr")]
-position = Vector2(-10, 8)
+position = Vector2(5, 0)
 
 [node name="health" parent="." instance=ExtResource("4_t1ujs")]
 health = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, 0)
+rotation = 4.712389
 scale = Vector2(0.03, 0.03)
 texture = ExtResource("1_7k104")
 

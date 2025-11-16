@@ -6,7 +6,7 @@ extends Node2D
 @onready var weapon = $weapon
 
 func _ready() -> void:
-	AI.set_weapon(weapon)
+	AI.initialize(self, weapon)
 
 func handle_hit():
 	health -= autoload.damage

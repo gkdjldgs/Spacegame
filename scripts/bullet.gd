@@ -24,4 +24,5 @@ func _on_timer_timeout() -> void:
 func _on_area_entered(area: Area2D) -> void:
 	if area.has_method('handle_hit'):
 		area.handle_hit()
+		print('quack')
 		self.queue_free()
