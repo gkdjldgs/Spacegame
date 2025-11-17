@@ -3,6 +3,11 @@ extends Node
 @onready var limit = autoload.spawnlocation
 @onready var limit1 = autoload.limit1
 @onready var limit2 = autoload.limit2
+
+
+var enemydos = preload('res://scripts/enemy2.tscn')
+
+
 var location = Vector2(0,0)
 
 # Called when the node enters the scene tree for the first time.
@@ -35,8 +40,15 @@ func randomizer():
 			location.y = randi_range(106, 190)
 
 func _on_alien_timer_timeout() -> void:
-	pass
-
-
+	var enemydos = preload('res://scripts/enemy2.tscn')
+	var enemy2 = enemydos.instantiate()
+	randomizer()
+	add_child(enemy2)
+	enemy2.global_position = location
+	
 func _on_ufotimer_timeout() -> void:
-	pass # Replace with function body.
+	var enemyuno = preload('res://scripts/enemy.tscn')
+	var enemy1 = enemyuno.instantiate()
+	randomizer()
+	add_child(enemy1)
+	enemy1.global_position = location

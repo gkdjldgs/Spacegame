@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bpfamqmjb7h2i"]
 
 [ext_resource type="Texture2D" uid="uid://fqoq7bhd52wg" path="res://alien.png" id="1_jfe6r"]
-[ext_resource type="Script" uid="uid://2maqh1sh2yk" path="res://enemy_2.gd" id="1_jugo2"]
+[ext_resource type="Script" uid="uid://2maqh1sh2yk" path="res://scripts/enemy_2.gd" id="1_jugo2"]
 [ext_resource type="PackedScene" uid="uid://8vaw3h13p0io" path="res://scripts/health.tscn" id="2_b3jlp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jugo2"]
