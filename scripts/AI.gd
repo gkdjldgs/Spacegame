@@ -42,7 +42,7 @@ func set_state(new_state: int):
 
 func _on_detectioner_body_entered(body: Node) -> void:
 	if body.is_in_group('play'):
-		print('sad')
+
 		set_state(State.ATTACK)
 		player = body
 

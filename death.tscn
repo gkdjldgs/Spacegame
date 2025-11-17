@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://fg6e8snr17ab"]
+[gd_scene load_steps=4 format=3 uid="uid://fg6e8snr17ab"]
 
 [ext_resource type="Script" uid="uid://b4n7xjxs7a501" path="res://restartbutton.gd" id="1_lf77f"]
 [ext_resource type="Texture2D" uid="uid://duw1p3g6qjrrg" path="res://scripts/death.png" id="1_qemge"]
+[ext_resource type="Script" uid="uid://dxneod2eiyadh" path="res://rich_text_label.gd" id="3_531me"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_lf77f")
@@ -16,5 +17,12 @@ offset_left = 248.0
 offset_top = 236.0
 offset_right = 1004.0
 offset_bottom = 426.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 247.0
+offset_top = 444.0
+offset_right = 744.0
+offset_bottom = 616.0
+script = ExtResource("3_531me")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

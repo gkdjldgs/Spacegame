@@ -21,15 +21,14 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func handle_hit():
-	health -= 2
-	if health <= 0:
-		autoload.score = 200
-		print(autoload.score)
+	health = 0
+	if health == 0:
+		autoload.score += 50
 		self.queue_free()
+
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.has_method('player_hit'):
-		print('work')
 		body.player_hit()
 		self.queue_free()
 	else:
