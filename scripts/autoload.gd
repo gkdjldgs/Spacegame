@@ -6,5 +6,25 @@ extends Node
 @onready var player_position = Vector2(0,0)
 @onready var limit1 = 0
 @onready var limit2 = 0
-
+@onready var spawnlocation := 1
 signal bullet_fired(bullet, position, direction)
+
+func _on_detection_1_body_entered(body: Node2D) -> void:
+	if body.has_method('player_hit'):
+		spawnlocation = 1
+		print(spawnlocation)
+
+func _on_detection_2_body_entered(body: Node2D) -> void:
+	if body.has_method('player_hit'):
+		spawnlocation = 2
+		print(spawnlocation)
+		
+func _on_detection_3_body_entered(body: Node2D) -> void:
+	if body.has_method('player_hit'):
+		spawnlocation = 3
+		print(spawnlocation)
+
+func _on_detection_4_body_entered(body: Node2D) -> void:
+	if body.has_method('player_hit'):
+		spawnlocation = 4
+		print(spawnlocation)

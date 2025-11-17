@@ -9,8 +9,7 @@ var speed = 60
 func _process(delta: float) -> void:
 	autoload.player_position = self.global_position
 	look_at(get_global_mouse_position())
-	if health.health == 0:
-		pass
+
 func _physics_process(delta: float) -> void:
 	var strafe = Vector2(Input.get_axis('left',"right",),
 	Input.get_axis('up','down'))
@@ -30,3 +29,5 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 func player_hit():
 	health.health -= 1
+	if health.health <= 0:
+		pass
