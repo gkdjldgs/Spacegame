@@ -33,6 +33,6 @@ texture = ExtResource("2_pqap4")
 zoom = Vector2(7.46, 7.46)
 
 [node name="health" parent="." instance=ExtResource("4_pqap4")]
-health = 3
+health = 5
 
 [node name="weapon" parent="." instance=ExtResource("5_2c7ny")]

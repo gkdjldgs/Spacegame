@@ -26,9 +26,10 @@ func handle_hit():
 		autoload.score = 200
 		print(autoload.score)
 		self.queue_free()
-		
-func _on_body_entered(body: Node2D) -> void:
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.has_method('player_hit'):
+		print('work')
 		body.player_hit()
 		self.queue_free()
 	else:

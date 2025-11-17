@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name Player
 
 var speed = 60
-@onready var health = $health
+@onready var health = $health.health
 @onready var weapon = $weapon
 
 
@@ -28,6 +28,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		weapon.shoot()
 		
 func player_hit():
-	health.health -= 1
-	if health.health <= 0:
+	health -= 1
+	print(health)
+	if health == 0:
 		pass
+		get_tree().change_scene_to_file('res://death.tscn')
