@@ -55,7 +55,7 @@ script = ExtResource("4_hakmx")
 script = ExtResource("5_0nr8p")
 
 [node name="player" parent="." instance=ExtResource("6_ocx4e")]
-position = Vector2(0, -4)
+position = Vector2(-3, 12)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_kv812")

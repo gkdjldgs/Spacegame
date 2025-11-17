@@ -11,20 +11,20 @@ signal bullet_fired(bullet, position, direction)
 
 func _on_detection_1_body_entered(body: Node2D) -> void:
 	if body.has_method('player_hit'):
-		spawnlocation = 1
+		spawnlocation = 3
 		print(spawnlocation)
 
 func _on_detection_2_body_entered(body: Node2D) -> void:
 	if body.has_method('player_hit'):
-		spawnlocation = 2
+		spawnlocation = 4
 		print(spawnlocation)
 		
 func _on_detection_3_body_entered(body: Node2D) -> void:
 	if body.has_method('player_hit'):
-		spawnlocation = 3
+		spawnlocation = 2
 		print(spawnlocation)
 
 func _on_detection_4_body_entered(body: Node2D) -> void:
 	if body.has_method('player_hit'):
-		spawnlocation = 4
+		spawnlocation = 1
 		print(spawnlocation)
