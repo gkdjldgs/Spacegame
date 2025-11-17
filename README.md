@@ -7,12 +7,21 @@ More importantly, I would like to show the CREDITS.
 
 The main game's mechanics are from a really good tutorial series by jmbiv, i'll link his channel and the playlist
 
-His Channel: https://www.youtube.com/@jmbiv_dev
-The playlist: https://www.youtube.com/watch?v=gXkkNSfxLRI&list=PLpwc3ughKbZexDyPexHN2MXLliKAovkpl&index=1
+The Channel - https://www.youtube.com/@jmbiv_dev
+The playlist - https://www.youtube.com/watch?v=gXkkNSfxLRI&list=PLpwc3ughKbZexDyPexHN2MXLliKAovkpl&index=1
 
-A huge amount of respect for this guy, he hard carried my project.
+A huge amount of respect for this guy, he hard carrys my projects(for mutiple weeks.)
 
 The Coder Kid also played a pretty huge role, his video on a Godot top down shooter is pretty good
+and a large part of the inspiration for this project
 
-His Channel - https://www.youtube.com/@thecodingkidchannel
-"Let's Code a 2D Top Down Shooter - https://www.youtube.com/watch?v=RxgkNv3APoU&t=929s
+The Channel - https://www.youtube.com/@thecodingkidchannel
+"Let's Code a 2D Top Down Shooter " - https://www.youtube.com/watch?v=RxgkNv3APoU&t=929s
+
+ThinkWithGames has an excellent video on using NavigationAreas and Agents to make enemy tracking
+which was so helpful..
+
+The Channel - https://www.youtube.com/@ThinkWithGames
+"Chase Players! " - https://www.youtube.com/watch?v=Ykz7W9BHzPg&t=194s
+
+
