@@ -1,5 +1,9 @@
 For this weeks game, I'm presenting a top down shooter game that focuses on shooting baddies and dodging bullets.
 
+A DEMO:
+
+https://youtu.be/1uLfKQ6zEPc
+
 This weeks theme is space, so I choose to make a game thats focused in 
 space on a distant planet fighting aliens in space.
 
