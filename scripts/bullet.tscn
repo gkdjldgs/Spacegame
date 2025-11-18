@@ -7,6 +7,7 @@
 radius = 146.10272
 
 [node name="Node2D" type="Area2D"]
+z_index = 1
 scale = Vector2(0.117, 0.117)
 script = ExtResource("1_v8qja")
 

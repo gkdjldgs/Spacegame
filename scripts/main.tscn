@@ -64,11 +64,12 @@ navigation_polygon = SubResource("NavigationPolygon_kv812")
 script = ExtResource("7_dkw4t")
 
 [node name="UFOTIMER" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 1.654
 autostart = true
 
 [node name="AlienTimer" type="Timer" parent="."]
 wait_time = 0.405
+autostart = true
 
 [node name="detection1" type="Area2D" parent="."]
 
