@@ -12,5 +12,4 @@ func handle_hit():
 	health -= autoload.damage
 	if health == 0:
 		autoload.score += 200
-		print(autoload.score)
 		self.queue_free()

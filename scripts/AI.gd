@@ -23,6 +23,7 @@ func _process(delta: float) -> void:
 		State.ATTACK:
 			if player != null and weapon != null:
 				actor.rotation = actor.global_position.direction_to(player.global_position).angle()
+				autoload.group = true
 				weapon.shoot()
 			else:
 				print('no weapon or player')
@@ -42,7 +43,6 @@ func set_state(new_state: int):
 
 func _on_detectioner_body_entered(body: Node) -> void:
 	if body.is_in_group('play'):
-
 		set_state(State.ATTACK)
 		player = body
 

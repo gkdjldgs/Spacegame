@@ -33,5 +33,8 @@ func _on_body_entered(body: Node2D) -> void:
 		self.queue_free()
 		
 	elif body.has_method('handle_hit'):
-		body.handle_hit()
-		self.queue_free()
+		if self.is_in_group('enemy'):
+			pass
+		elif self.is_in_group('play'):
+			body.handle_hit()
+			self.queue_free()

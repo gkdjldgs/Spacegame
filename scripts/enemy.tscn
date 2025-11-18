@@ -13,7 +13,7 @@ height = 592592.6
 [sub_resource type="CircleShape2D" id="CircleShape2D_qi2p4"]
 radius = 82.02438
 
-[node name="Node2D" type="Area2D"]
+[node name="Node2D" type="Area2D" groups=["enemy"]]
 script = ExtResource("1_4gyqm")
 
 [node name="weapon" parent="." instance=ExtResource("2_wvybr")]

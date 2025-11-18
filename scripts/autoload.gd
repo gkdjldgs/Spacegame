@@ -7,7 +7,8 @@ extends Node
 @onready var limit1 = 0
 @onready var limit2 = 0
 @onready var spawnlocation := 1
-signal bullet_fired(bullet, position, direction)
+@onready var group = false
+signal bullet_fired(bullet, position, direction, group)
 
 func _on_detection_1_body_entered(body: Node2D) -> void:
 	if body.has_method('player_hit'):

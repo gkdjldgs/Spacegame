@@ -23,6 +23,11 @@ autoload="*res://scripts/autoload.gd"
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[global_group]
+
+enemy=""
+play=""
+
 [input]
 
 left={
