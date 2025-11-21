@@ -3,7 +3,7 @@ extends Node
 @onready var limit = autoload.spawnlocation
 @onready var limit1 = autoload.limit1
 @onready var limit2 = autoload.limit2
-
+@onready var test = false
 
 var enemydos = preload('res://scripts/enemy2.tscn')
 
@@ -45,6 +45,8 @@ func _on_alien_timer_timeout() -> void:
 	randomizer()
 	add_child(enemy2)
 	enemy2.global_position = location
+	
+	
 	
 func _on_ufotimer_timeout() -> void:
 	var enemyuno = preload('res://scripts/enemy.tscn')
