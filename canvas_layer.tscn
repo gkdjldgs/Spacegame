@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dlf3dxxgh2m2y"]
+[gd_scene load_steps=11 format=3 uid="uid://dlf3dxxgh2m2y"]
 
 [ext_resource type="Script" uid="uid://d3lkusish6txh" path="res://menu1.gd" id="1_v2lfg"]
 [ext_resource type="Texture2D" uid="uid://c0kwpigtj5jh4" path="res://images/playnormal.png" id="2_37rai"]
@@ -6,7 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://clw1tgj4h8v17" path="res://images/asd.png" id="4_mx0kw"]
 [ext_resource type="Texture2D" uid="uid://cw2bpo0vqak23" path="res://images/da.png" id="5_w4oxd"]
 [ext_resource type="Texture2D" uid="uid://d1c541e6qn144" path="res://images/magicpattern-starry-night-1763695555687.png" id="6_fsbdh"]
+[ext_resource type="Texture2D" uid="uid://du0rlpgbrqj2y" path="res://images/quitgamenormal.png" id="6_g3huw"]
 [ext_resource type="Texture2D" uid="uid://40rqcrp2o6kj" path="res://images/titlecard-removebg-preview.png" id="6_w4oxd"]
+[ext_resource type="Texture2D" uid="uid://b7w7oa8sul75m" path="res://images/quitgamehover.png" id="7_280g2"]
+[ext_resource type="PackedScene" uid="uid://bcs488y62ib1s" path="res://fadetras.tscn" id="10_280g2"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -52,6 +55,12 @@ texture_normal = ExtResource("4_mx0kw")
 texture_pressed = ExtResource("5_w4oxd")
 texture_hover = ExtResource("5_w4oxd")
 
+[node name="TextureButton" type="TextureButton" parent="Control/Menu1/CenterContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_g3huw")
+texture_pressed = ExtResource("6_g3huw")
+texture_hover = ExtResource("7_280g2")
+
 [node name="MagicpatternStarryNight1763695555687" type="Sprite2D" parent="Control/Menu1"]
 z_index = -6
 position = Vector2(572, 325)
@@ -67,8 +76,18 @@ offset_right = 1152.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="ColorRect" parent="Control" instance=ExtResource("10_280g2")]
+visible = false
+z_index = 5
+layout_mode = 0
+
+[node name="Timer" type="Timer" parent="Control/ColorRect"]
+one_shot = true
+
 [node name="TitlecardRemovebgPreview" type="Sprite2D" parent="."]
 position = Vector2(565, 82)
 texture = ExtResource("6_w4oxd")
 
 [connection signal="pressed" from="Control/Menu1/CenterContainer/VBoxContainer/Button" to="Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Menu1/CenterContainer/VBoxContainer/Button2" to="Control" method="_on_button_2_pressed"]
+[connection signal="timeout" from="Control/ColorRect/Timer" to="Control" method="_on_timer_timeout"]

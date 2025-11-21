@@ -2,7 +2,7 @@ extends Control
 
 var menuoriginalpos := Vector2(0,0)
 var menuoriginalscale := Vector2(0,0)
-
+var button_type = null
 var current_menu
 var menu_stack := []
 
@@ -39,4 +39,22 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file('res://scripts/main.tscn')
+	button_type = 'start'
+	$ColorRect.show()
+	$ColorRect/Timer.start()
+	$ColorRect/AnimationPlayer.play('fadeout')
+
+
+func _on_button_2_pressed() -> void:
+	button_type = 'quit'
+	$ColorRect.show()
+	$ColorRect/Timer.start()
+	$ColorRect/AnimationPlayer.play('fadeout')
+
+
+func _on_timer_timeout() -> void:
+	if button_type == 'start':
+		get_tree().change_scene_to_file('res://scripts/main.tscn')
+	elif button_type == 'quit':
+		get_tree().quit()
+		
