@@ -5,6 +5,9 @@ var speed = 60
 @onready var health = $health.health
 @onready var weapon = $weapon
 
+func healthy():
+	if health != autoload.playerhealth:
+		autoload.playerhealth = health
 
 func _process(delta: float) -> void:
 	autoload.player_position = self.global_position
@@ -30,11 +33,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 func player_hit():
 	if $Timer.is_stopped():
-		print('sed')
-		health = 1
+		health -= 1
+		healthy()
+		$CanvasLayer.heartcheck()
 		if health == 0:
-			pass
 			get_tree().change_scene_to_file('res://death.tscn')
 	else:
 		$Timer.start()
-		print('sad')

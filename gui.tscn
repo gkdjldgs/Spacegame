@@ -1,32 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2w8psh5gq154"]
+[gd_scene load_steps=4 format=3 uid="uid://b2w8psh5gq154"]
 
 [ext_resource type="Script" uid="uid://di5d8xxejhia3" path="res://gui.gd" id="1_6lon5"]
 [ext_resource type="Texture2D" uid="uid://ccd7ve7wxyrek" path="res://images/heart.png" id="1_80edf"]
+[ext_resource type="PackedScene" uid="uid://cst22lggim4xx" path="res://heartanimations.tscn" id="3_q8o8l"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_6lon5")
 
 [node name="Heart1" type="Sprite2D" parent="."]
-position = Vector2(1086, 119)
+position = Vector2(61, 588)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_80edf")
 
 [node name="Heart2" type="Sprite2D" parent="."]
-position = Vector2(1086, 219)
+position = Vector2(151, 588)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_80edf")
 
 [node name="Heart3" type="Sprite2D" parent="."]
-position = Vector2(1086, 319)
+position = Vector2(241, 588)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_80edf")
 
-[node name="Heart4" type="Sprite2D" parent="."]
-position = Vector2(1086, 419)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_80edf")
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 312.0
+offset_top = 539.0
+offset_right = 741.0
+offset_bottom = 618.0
 
-[node name="Heart5" type="Sprite2D" parent="."]
-position = Vector2(1086, 519)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_80edf")
+[node name="Heartanimation3" parent="." instance=ExtResource("3_q8o8l")]
+position = Vector2(241, 588)
+
+[node name="Heartanimation2" parent="." instance=ExtResource("3_q8o8l")]
+position = Vector2(151, 588)
+
+[node name="Heartanimation1" parent="." instance=ExtResource("3_q8o8l")]
+position = Vector2(61, 587)
