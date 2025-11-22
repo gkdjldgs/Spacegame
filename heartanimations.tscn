@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://cst22lggim4xx"]
+
+[ext_resource type="Texture2D" uid="uid://ccd7ve7wxyrek" path="res://images/heart.png" id="1_621b8"]
+
+[sub_resource type="Animation" id="Animation_t80rt"]
+resource_name = "heartappear"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 0.93333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.00085616956, 0.00085617026), Vector2(0.25, 0.25)]
+}
+
+[sub_resource type="Animation" id="Animation_m5mio"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.00085616956, 0.00085617026)]
+}
+
+[sub_resource type="Animation" id="Animation_621b8"]
+resource_name = "heartdisappear"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666667, 0.96666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.25, 0.25), Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xerny"]
+_data = {
+&"RESET": SubResource("Animation_m5mio"),
+&"heartappear": SubResource("Animation_t80rt"),
+&"heartdisappear": SubResource("Animation_621b8")
+}
+
+[node name="Node2D" type="Sprite2D"]
+position = Vector2(0, 2.3841858e-07)
+scale = Vector2(0.00085616956, 0.00085617026)
+texture = ExtResource("1_621b8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_xerny")
+}

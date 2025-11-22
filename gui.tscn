@@ -1,3 +1,32 @@
-[gd_scene format=3 uid="uid://b2w8psh5gq154"]
+[gd_scene load_steps=3 format=3 uid="uid://b2w8psh5gq154"]
+
+[ext_resource type="Script" uid="uid://di5d8xxejhia3" path="res://gui.gd" id="1_6lon5"]
+[ext_resource type="Texture2D" uid="uid://ccd7ve7wxyrek" path="res://images/heart.png" id="1_80edf"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_6lon5")
+
+[node name="Heart1" type="Sprite2D" parent="."]
+position = Vector2(1086, 119)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_80edf")
+
+[node name="Heart2" type="Sprite2D" parent="."]
+position = Vector2(1086, 219)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_80edf")
+
+[node name="Heart3" type="Sprite2D" parent="."]
+position = Vector2(1086, 319)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_80edf")
+
+[node name="Heart4" type="Sprite2D" parent="."]
+position = Vector2(1086, 419)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_80edf")
+
+[node name="Heart5" type="Sprite2D" parent="."]
+position = Vector2(1086, 519)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_80edf")
