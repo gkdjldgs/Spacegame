@@ -11,8 +11,16 @@ extends Node
 @onready var playerhealth := 0
 @onready var intials = true
 @onready var death = false
+@onready var highscore = 0
 signal bullet_fired(bullet, position, direction, group)
 
+func _process(delta: float) -> void:
+	if score > highscore:
+		highscore = score
+	else:
+		pass
+	
+	
 func _on_detection_1_body_entered(body: Node2D) -> void:
 	if body.has_method('player_hit'):
 		spawnlocation = 3

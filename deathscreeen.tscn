@@ -1,7 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdvnprmpqed3b"]
+[gd_scene load_steps=10 format=3 uid="uid://bdvnprmpqed3b"]
 
 [ext_resource type="Script" uid="uid://de6xortmxkmou" path="res://deathscreeen.gd" id="1_8edqn"]
 [ext_resource type="Texture2D" uid="uid://dxy0itsonvkox" path="res://scripts/deathscreener.png" id="1_ceesr"]
+[ext_resource type="Texture2D" uid="uid://ddbduq5bmiqbg" path="res://images/score.png" id="3_kex3e"]
+[ext_resource type="Texture2D" uid="uid://bj6kch2il2ups" path="res://images/highscore.png" id="4_bf7q1"]
+[ext_resource type="Script" uid="uid://r1obqo328bc3" path="res://scorelabel.gd" id="5_peihn"]
+[ext_resource type="Script" uid="uid://c5w41qwqt8xiy" path="res://highscore.gd" id="6_bf7q1"]
 
 [sub_resource type="Animation" id="Animation_8edqn"]
 length = 0.001
@@ -41,9 +45,11 @@ _data = {
 }
 
 [node name="CanvasLayer" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_8edqn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+process_mode = 3
 texture_filter = 1
 position = Vector2(578, 326)
 texture = ExtResource("1_ceesr")
@@ -53,3 +59,48 @@ root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_8edqn")
 }
+
+[node name="Score" type="Sprite2D" parent="."]
+process_mode = 3
+z_index = 2
+position = Vector2(728, 218)
+texture = ExtResource("3_kex3e")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+z_index = 2
+offset_left = 867.0
+offset_top = 189.0
+offset_right = 1141.0
+offset_bottom = 293.0
+theme_override_colors/default_color = Color(0.6156863, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 60
+fit_content = true
+tab_size = 8
+script = ExtResource("5_peihn")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+process_mode = 3
+modulate = Color(0.6156863, 0, 0, 1)
+z_index = 2
+offset_left = 875.0
+offset_top = 278.0
+offset_right = 1117.0
+offset_bottom = 392.0
+theme_override_font_sizes/normal_font_size = 60
+script = ExtResource("6_bf7q1")
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 3
+wait_time = 2.5
+one_shot = true
+autostart = true
+
+[node name="Highscore" type="Sprite2D" parent="."]
+process_mode = 3
+z_index = 2
+position = Vector2(649, 306)
+texture = ExtResource("4_bf7q1")
+
+[connection signal="timeout" from="Timer" to="Score" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="RichTextLabel" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="RichTextLabel2" method="_on_timer_timeout"]
