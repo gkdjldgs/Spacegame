@@ -28,4 +28,11 @@ which was so helpful..
 The Channel - https://www.youtube.com/@ThinkWithGames
 "Chase Players! " - https://www.youtube.com/watch?v=Ykz7W9BHzPg&t=194s
 
+For week 2 I've watched one more tutorial;
+
+RobottoBani has a really simple but useful tutorial to make really good looking main menus and screen transitions, 
+which is something I hadn't really tried before, which made this tutorial amazing.
+
+The Channel - https://www.youtube.com/@Robottobani
+'Godot 4 Main menu tutorial in UNDER 5 MINUTES ( + Screen Transitions! )' - https://www.youtube.com/watch?v=29jCe-mjyKQ
 
