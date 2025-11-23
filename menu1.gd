@@ -40,6 +40,7 @@ func _process(delta: float) -> void:
 
 func _on_button_pressed() -> void:
 	button_type = 'start'
+	autoload.score = 0
 	$ColorRect.show()
 	$ColorRect/Timer.start()
 	$ColorRect/AnimationPlayer.play('fadeout')

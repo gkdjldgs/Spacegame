@@ -63,12 +63,12 @@ navigation_polygon = SubResource("NavigationPolygon_kv812")
 [node name="enemyspawner" type="Node" parent="."]
 script = ExtResource("7_dkw4t")
 
-[node name="UFOTIMER" type="Timer" parent="."]
-wait_time = 1.654
+[node name="timer" type="Timer" parent="."]
+wait_time = 25.0
 autostart = true
 
 [node name="AlienTimer" type="Timer" parent="."]
-wait_time = 0.814
+wait_time = 1.6999999999999997
 autostart = true
 
 [node name="detection1" type="Area2D" parent="."]
@@ -95,7 +95,7 @@ shape = SubResource("RectangleShape2D_ocx4e")
 position = Vector2(1, 180.5)
 shape = SubResource("RectangleShape2D_dkw4t")
 
-[connection signal="timeout" from="UFOTIMER" to="enemyspawner" method="_on_ufotimer_timeout"]
+[connection signal="timeout" from="timer" to="autoload" method="_on_timer_timeout"]
 [connection signal="timeout" from="AlienTimer" to="enemyspawner" method="_on_alien_timer_timeout"]
 [connection signal="body_entered" from="detection1" to="autoload" method="_on_detection_4_body_entered"]
 [connection signal="body_entered" from="detection2" to="autoload" method="_on_detection_3_body_entered"]

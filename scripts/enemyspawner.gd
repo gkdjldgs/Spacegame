@@ -4,6 +4,7 @@ extends Node
 @onready var limit1 = autoload.limit1
 @onready var limit2 = autoload.limit2
 @onready var test = false
+var wave = autoload.wave
 
 var enemydos = preload('res://scripts/enemy2.tscn')
 
@@ -39,18 +40,44 @@ func randomizer():
 			location.x = randi_range(-123, 120)
 			location.y = randi_range(106, 190)
 
-func _on_alien_timer_timeout() -> void:
+func alienspawn():
 	var enemydos = preload('res://scripts/enemy2.tscn')
 	var enemy2 = enemydos.instantiate()
 	randomizer()
 	add_child(enemy2)
 	enemy2.global_position = location
 	
-	
-	
-func _on_ufotimer_timeout() -> void:
+func ufospawn():
 	var enemyuno = preload('res://scripts/enemy.tscn')
 	var enemy1 = enemyuno.instantiate()
 	randomizer()
 	add_child(enemy1)
 	enemy1.global_position = location
+	
+func _on_alien_timer_timeout() -> void:
+	if wave ==  1:
+		alienspawn()
+	elif wave == 2:
+		alienspawn()
+		alienspawn()
+	elif wave == 3:
+		ufospawn()
+	elif wave == 4:
+		alienspawn()
+		ufospawn()
+	elif wave == 5:
+		alienspawn()
+		alienspawn()
+		alienspawn()
+	elif wave == 6:
+		alienspawn()
+		alienspawn()
+		ufospawn()
+		ufospawn()
+	elif wave == 7:
+		alienspawn()
+		alienspawn()
+		alienspawn()
+		ufospawn()
+	elif wave == 8:
+		pass

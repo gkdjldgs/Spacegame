@@ -12,6 +12,7 @@ extends Node
 @onready var intials = true
 @onready var death = false
 @onready var highscore = 0
+@onready var wave = 1
 signal bullet_fired(bullet, position, direction, group)
 
 func _process(delta: float) -> void:
@@ -36,3 +37,10 @@ func _on_detection_3_body_entered(body: Node2D) -> void:
 func _on_detection_4_body_entered(body: Node2D) -> void:
 	if body.has_method('player_hit'):
 		spawnlocation = 1
+
+
+func _on_timer_timeout() -> void:
+	if wave < 7:
+		autoload.wave += 1
+	else:
+		pass
