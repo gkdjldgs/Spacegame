@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://cqow47bch5ocs"]
 
 [ext_resource type="Script" uid="uid://blyusjbdydqg5" path="res://scripts/main.gd" id="1_irwmq"]
-[ext_resource type="Texture2D" uid="uid://cirmmt8vl31d4" path="res://images/planet.png" id="1_q753v"]
+[ext_resource type="Texture2D" uid="uid://do4g3w4qki4kk" path="res://images/marsterrain-removebg-preview.png" id="3_ocx4e"]
 [ext_resource type="Script" uid="uid://b538ebb8m1t4j" path="res://scripts/manager.gd" id="4_hakmx"]
 [ext_resource type="Script" uid="uid://cik3rnsqebmn8" path="res://scripts/autoload.gd" id="5_0nr8p"]
 [ext_resource type="PackedScene" uid="uid://ccfhqh8b837fa" path="res://scripts/player.tscn" id="6_ocx4e"]
@@ -36,10 +36,9 @@ scale = Vector2(0.8370056, 0.8370056)
 texture = ExtResource("7_ocx4e")
 
 [node name="Planet" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-2.75, -37.552673)
-scale = Vector2(2.7392344, 2.7392342)
-texture = ExtResource("1_q753v")
+position = Vector2(-3.9999976, -4.000001)
+scale = Vector2(0.326, 0.32599998)
+texture = ExtResource("3_ocx4e")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(1.2500305, -37.552673)
@@ -58,6 +57,7 @@ script = ExtResource("5_0nr8p")
 position = Vector2(0, -4)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(0, 2)
 navigation_polygon = SubResource("NavigationPolygon_kv812")
 
 [node name="enemyspawner" type="Node" parent="."]
@@ -72,24 +72,28 @@ wait_time = 0.405
 autostart = true
 
 [node name="detection1" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection1"]
 position = Vector2(1, -195.75)
 shape = SubResource("RectangleShape2D_ragmj")
 
 [node name="detection2" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection2"]
 position = Vector2(2.25, -62.25)
 shape = SubResource("RectangleShape2D_kv812")
 
 [node name="detection3" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection3"]
 position = Vector2(1, 56.5)
 shape = SubResource("RectangleShape2D_ocx4e")
 
 [node name="detection4" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection4"]
 position = Vector2(1, 180.5)

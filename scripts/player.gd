@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name Player
 
 var speed = 60
+var hit = false
 @onready var health = $health.health
 @onready var weapon = $weapon
 
@@ -32,11 +33,16 @@ func _unhandled_input(event: InputEvent) -> void:
 		weapon.shoot()
 		
 func player_hit():
-	if $Timer.is_stopped():
+	if hit == false:
+		hit = true
 		health -= 1
 		healthy()
-		$CanvasLayer.heartcheck()
+		await $CanvasLayer.heartcheck()
+		hit = false
 		if health == 0:
-			get_tree().change_scene_to_file('res://death.tscn')
+			get_tree().paused = true
+			$deathscreeen.show()
+			await $deathscreeen/Sprite2D/AnimationPlayer.play("deathanimation")
+			
 	else:
-		$Timer.start()
+		pass
