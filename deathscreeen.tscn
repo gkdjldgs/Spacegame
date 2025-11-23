@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bdvnprmpqed3b"]
+[gd_scene load_steps=11 format=3 uid="uid://bdvnprmpqed3b"]
 
 [ext_resource type="Script" uid="uid://de6xortmxkmou" path="res://deathscreeen.gd" id="1_8edqn"]
 [ext_resource type="Texture2D" uid="uid://dxy0itsonvkox" path="res://scripts/deathscreener.png" id="1_ceesr"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bj6kch2il2ups" path="res://images/highscore.png" id="4_bf7q1"]
 [ext_resource type="Script" uid="uid://r1obqo328bc3" path="res://scorelabel.gd" id="5_peihn"]
 [ext_resource type="Script" uid="uid://c5w41qwqt8xiy" path="res://highscore.gd" id="6_bf7q1"]
+[ext_resource type="Script" uid="uid://uusxfhw2epny" path="res://button.gd" id="7_peihn"]
 
 [sub_resource type="Animation" id="Animation_8edqn"]
 length = 0.001
@@ -101,6 +102,14 @@ z_index = 2
 position = Vector2(649, 306)
 texture = ExtResource("4_bf7q1")
 
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_top = -3.0
+offset_right = 1150.0
+offset_bottom = 637.0
+script = ExtResource("7_peihn")
+
 [connection signal="timeout" from="Timer" to="Score" method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="RichTextLabel" method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="RichTextLabel2" method="_on_timer_timeout"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

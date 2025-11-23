@@ -44,13 +44,14 @@ func _on_button_pressed() -> void:
 	$ColorRect/Timer.start()
 	$ColorRect/AnimationPlayer.play('fadeout')
 
-
 func _on_button_2_pressed() -> void:
+	button_type = null
 	get_tree().change_scene_to_file('res://menu.tscn')
 
 
 func _on_timer_timeout() -> void:
 	if button_type == 'start':
+		button_type = null
 		get_tree().change_scene_to_file('res://scripts/main.tscn')
 	elif button_type == 'quit':
 		get_tree().quit()
