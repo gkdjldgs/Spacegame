@@ -68,7 +68,7 @@ wait_time = 1.654
 autostart = true
 
 [node name="AlienTimer" type="Timer" parent="."]
-wait_time = 0.405
+wait_time = 0.814
 autostart = true
 
 [node name="detection1" type="Area2D" parent="."]

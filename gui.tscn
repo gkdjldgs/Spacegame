@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2w8psh5gq154"]
+[gd_scene load_steps=5 format=3 uid="uid://b2w8psh5gq154"]
 
 [ext_resource type="Script" uid="uid://di5d8xxejhia3" path="res://gui.gd" id="1_6lon5"]
 [ext_resource type="Texture2D" uid="uid://ccd7ve7wxyrek" path="res://images/heart.png" id="1_80edf"]
 [ext_resource type="PackedScene" uid="uid://cst22lggim4xx" path="res://heartanimations.tscn" id="3_q8o8l"]
+[ext_resource type="PackedScene" uid="uid://cutx7hnrlyh26" path="res://rich_text_label.tscn" id="4_cor1f"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 process_mode = 3
@@ -37,3 +38,9 @@ position = Vector2(151, 588)
 
 [node name="Heartanimation1" parent="." instance=ExtResource("3_q8o8l")]
 position = Vector2(61, 587)
+
+[node name="RichTextLabel2" parent="." instance=ExtResource("4_cor1f")]
+offset_left = 22.0
+offset_top = 508.0
+offset_right = 380.0
+offset_bottom = 548.0

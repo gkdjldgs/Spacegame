@@ -11,6 +11,7 @@ func healthy():
 		autoload.playerhealth = health
 
 func _ready() -> void:
+	autoload.death = false
 	autoload.intials = true
 func _process(delta: float) -> void:
 	autoload.player_position = self.global_position
@@ -43,7 +44,7 @@ func player_hit():
 			await $CanvasLayer.heartcheck()
 			hit = false
 			if health == 0:
-				
+				autoload.death = true
 				get_tree().paused = true
 				$deathscreeen.show()
 				$deathscreeen/Sprite2D/AnimationPlayer.play("deathanimation")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cutx7hnrlyh26"]
+
+[ext_resource type="Script" uid="uid://dxneod2eiyadh" path="res://rich_text_label.gd" id="1_2ild6"]
+
+[node name="RichTextLabel" type="RichTextLabel"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_font_sizes/normal_font_size = 32
+script = ExtResource("1_2ild6")
