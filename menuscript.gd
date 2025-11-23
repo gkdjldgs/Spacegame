@@ -20,3 +20,7 @@ func _on_texture_button_pressed() -> void:
 		$Sprite2D2.hide()
 		$Sprite2D.show()
 		menu = 1
+
+
+func _on_texture_button_2_pressed() -> void:
+	get_tree().change_scene_to_file('res://canvas_layer.tscn')
