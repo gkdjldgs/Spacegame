@@ -29,6 +29,10 @@ enemy=""
 play=""
 forcefield=""
 
+[gui]
+
+theme/custom_font="uid://cjk0tahtmm4oj"
+
 [input]
 
 left={

@@ -9,6 +9,7 @@ extends Node
 @onready var spawnlocation := 1
 @onready var group = false
 @onready var playerhealth := 0
+@onready var intials = true
 signal bullet_fired(bullet, position, direction, group)
 
 func _on_detection_1_body_entered(body: Node2D) -> void:

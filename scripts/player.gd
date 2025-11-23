@@ -10,6 +10,8 @@ func healthy():
 	if health != autoload.playerhealth:
 		autoload.playerhealth = health
 
+func _ready() -> void:
+	autoload.intials = true
 func _process(delta: float) -> void:
 	autoload.player_position = self.global_position
 	look_at(get_global_mouse_position())
@@ -33,16 +35,24 @@ func _unhandled_input(event: InputEvent) -> void:
 		weapon.shoot()
 		
 func player_hit():
-	if hit == false:
-		hit = true
-		health -= 1
-		healthy()
-		await $CanvasLayer.heartcheck()
-		hit = false
-		if health == 0:
-			get_tree().paused = true
-			$deathscreeen.show()
-			$deathscreeen/Sprite2D/AnimationPlayer.play("deathanimation")
-			
-	else:
+	if autoload.intials == false:
+		if hit == false:
+			hit = true
+			health -= 1
+			healthy()
+			await $CanvasLayer.heartcheck()
+			hit = false
+			if health == 0:
+				
+				get_tree().paused = true
+				$deathscreeen.show()
+				$deathscreeen/Sprite2D/AnimationPlayer.play("deathanimation")
+		else:
+			pass
+	elif autoload.intials == true:
 		pass
+
+
+func _on_tptimer_timeout() -> void:
+	self.global_position = Vector2(0,0)
+	autoload.intials = false

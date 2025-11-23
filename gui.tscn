@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cst22lggim4xx" path="res://heartanimations.tscn" id="3_q8o8l"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_6lon5")
 
 [node name="Heart1" type="Sprite2D" parent="."]
