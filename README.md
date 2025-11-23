@@ -4,8 +4,9 @@ A DEMO:
 
 https://youtu.be/1uLfKQ6zEPc
 
-This weeks theme is space, so I choose to make a game thats focused in 
-space on a distant planet fighting aliens in space.
+This weeks theme is framework. I decided to go with improving how my game worked through adding missing 
+feature, and adding more to the game. I followed the theme by improving the framework of the game
+by improving the games structure and code through adding features and bug fixing.
 
 More importantly, I would like to show the CREDITS.
 
@@ -36,3 +37,10 @@ which is something I hadn't really tried before, which made this tutorial amazin
 The Channel - https://www.youtube.com/@Robottobani
 'Godot 4 Main menu tutorial in UNDER 5 MINUTES ( + Screen Transitions! )' - https://www.youtube.com/watch?v=29jCe-mjyKQ
 
+AI
+
+This time I sadly have AI in the project. 
+It only is used in the starry night sky backgrounds (with the stars and comets in the bg)
+
+As far as I can tell the texture used for the planet terrain doesn't use AI, it uses algorithims to make planets 
+and comes from a website older than AI becoming popular (2007)
