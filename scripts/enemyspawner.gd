@@ -55,26 +55,26 @@ func ufospawn():
 	enemy1.global_position = location
 	
 func _on_alien_timer_timeout() -> void:
-	if wave ==  1:
+	if autoload.wave ==  1:
 		alienspawn()
-	elif wave == 2:
+	elif autoload.wave == 2:
 		alienspawn()
 		alienspawn()
-	elif wave == 3:
+	elif autoload.wave == 3:
 		ufospawn()
-	elif wave == 4:
-		alienspawn()
-		ufospawn()
-	elif wave == 5:
-		alienspawn()
-		alienspawn()
-		alienspawn()
-	elif wave == 6:
-		alienspawn()
+	elif autoload.wave == 4:
 		alienspawn()
 		ufospawn()
+	elif autoload.wave == 5:
+		alienspawn()
+		alienspawn()
+		alienspawn()
+	elif autoload.wave == 6:
+		alienspawn()
+		alienspawn()
 		ufospawn()
-	elif wave == 7:
+		ufospawn()
+	elif autoload.wave == 7:
 		alienspawn()
 		alienspawn()
 		alienspawn()
