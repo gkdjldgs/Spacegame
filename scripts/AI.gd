@@ -45,6 +45,8 @@ func _on_detectioner_body_entered(body: Node) -> void:
 	if body.is_in_group('play'):
 		set_state(State.ATTACK)
 		player = body
+	else:
+		pass
 
 
 

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://x02ivrkrfn5m" path="res://scripts/forcefield.gd" id="1_0dk3e"]
 [ext_resource type="Texture2D" uid="uid://2rjyn4cbvbb5" path="res://images/forcefield-removebg-preview.png" id="2_l14em"]
 
-[node name="forcefield" type="CharacterBody2D"]
+[node name="forcefield" type="CharacterBody2D" groups=["forcefield"]]
 modulate = Color(1, 1, 1, 0.50980395)
 scale = Vector2(0.13259113, 0.13259113)
 script = ExtResource("1_0dk3e")

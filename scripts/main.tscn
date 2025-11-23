@@ -72,28 +72,24 @@ wait_time = 0.405
 autostart = true
 
 [node name="detection1" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection1"]
 position = Vector2(1, -195.75)
 shape = SubResource("RectangleShape2D_ragmj")
 
 [node name="detection2" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection2"]
 position = Vector2(2.25, -62.25)
 shape = SubResource("RectangleShape2D_kv812")
 
 [node name="detection3" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection3"]
 position = Vector2(1, 56.5)
 shape = SubResource("RectangleShape2D_ocx4e")
 
 [node name="detection4" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection4"]
 position = Vector2(1, 180.5)

@@ -29,8 +29,11 @@ func _on_area_entered(area: Area2D) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.has_method('player_hit'):
-		body.player_hit()
-		self.queue_free()
+		if self.is_in_group('enemy'):
+			body.player_hit()
+			self.queue_free()
+		elif self.is_in_group('forcefield'):
+			pass
 	elif body.has_method('handle_hit'):
 		if self.is_in_group('enemy'):
 			pass

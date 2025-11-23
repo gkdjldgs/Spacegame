@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ccfhqh8b837fa"]
+[gd_scene load_steps=9 format=3 uid="uid://ccfhqh8b837fa"]
 
 [ext_resource type="Script" uid="uid://b6vpr054oidvd" path="res://scripts/player.gd" id="1_fhbv5"]
 [ext_resource type="Texture2D" uid="uid://dpnhjbjprg5ie" path="res://images/players.png" id="2_pqap4"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://c6dm6cnrpjrlv" path="res://scripts/weapon.tscn" id="5_2c7ny"]
 [ext_resource type="PackedScene" uid="uid://b2w8psh5gq154" path="res://gui.tscn" id="6_0jhex"]
 [ext_resource type="PackedScene" uid="uid://bdvnprmpqed3b" path="res://deathscreeen.tscn" id="7_38am0"]
-[ext_resource type="PackedScene" uid="uid://b4igns3d8ckfh" path="res://scripts/forcefield.tscn" id="8_xfidv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kv812"]
 radius = 9.23077
@@ -51,5 +50,3 @@ layer = 4
 [node name="deathscreeen" parent="." instance=ExtResource("7_38am0")]
 process_mode = 3
 visible = false
-
-[node name="forcefield" parent="." instance=ExtResource("8_xfidv")]
