@@ -23,10 +23,10 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_80edf")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 312.0
-offset_top = 539.0
-offset_right = 741.0
-offset_bottom = 618.0
+offset_left = 307.0
+offset_top = 554.0
+offset_right = 736.0
+offset_bottom = 633.0
 
 [node name="Heartanimation3" parent="." instance=ExtResource("3_q8o8l")]
 position = Vector2(241, 588)

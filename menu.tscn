@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvkvtb25je5tc"]
+
+[ext_resource type="Script" uid="uid://cvw67bs2phwsj" path="res://menuscript.gd" id="1_4hy44"]
+[ext_resource type="Texture2D" uid="uid://b0jmjvfiave3y" path="res://images/controlmenupart1.png" id="1_lti8b"]
+[ext_resource type="Texture2D" uid="uid://ctp8cyuwuc14k" path="res://images/menu2.png" id="3_ytr4m"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://images/icon.svg" id="4_l48gv"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_4hy44")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(578, 324)
+texture = ExtResource("1_lti8b")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(577, 322)
+texture = ExtResource("3_ytr4m")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 1014.0
+offset_top = 512.0
+offset_right = 1142.0
+offset_bottom = 640.0
+texture_normal = ExtResource("4_l48gv")
+texture_pressed = ExtResource("4_l48gv")
+texture_hover = ExtResource("4_l48gv")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

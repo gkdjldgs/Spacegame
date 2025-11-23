@@ -46,10 +46,7 @@ func _on_button_pressed() -> void:
 
 
 func _on_button_2_pressed() -> void:
-	button_type = 'quit'
-	$ColorRect.show()
-	$ColorRect/Timer.start()
-	$ColorRect/AnimationPlayer.play('fadeout')
+	get_tree().change_scene_to_file('res://menu.tscn')
 
 
 func _on_timer_timeout() -> void:
@@ -58,3 +55,10 @@ func _on_timer_timeout() -> void:
 	elif button_type == 'quit':
 		get_tree().quit()
 		
+
+
+func _on_texture_button_pressed() -> void:
+	button_type = 'quit'
+	$ColorRect.show()
+	$ColorRect/Timer.start()
+	$ColorRect/AnimationPlayer.play('fadeout')
