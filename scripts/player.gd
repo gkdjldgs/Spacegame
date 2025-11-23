@@ -42,7 +42,7 @@ func player_hit():
 		if health == 0:
 			get_tree().paused = true
 			$deathscreeen.show()
-			await $deathscreeen/Sprite2D/AnimationPlayer.play("deathanimation")
+			$deathscreeen/Sprite2D/AnimationPlayer.play("deathanimation")
 			
 	else:
 		pass

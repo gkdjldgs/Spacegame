@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4igns3d8ckfh"]
+
+[ext_resource type="Script" uid="uid://x02ivrkrfn5m" path="res://scripts/forcefield.gd" id="1_0dk3e"]
+[ext_resource type="Texture2D" uid="uid://2rjyn4cbvbb5" path="res://images/forcefield-removebg-preview.png" id="2_l14em"]
+
+[node name="forcefield" type="CharacterBody2D"]
+modulate = Color(1, 1, 1, 0.50980395)
+scale = Vector2(0.13259113, 0.13259113)
+script = ExtResource("1_0dk3e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_l14em")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(60.33586, 45.251896, 60.33586, 45.251896, 98.04578, 67.877846, 120.67172, 7.5419827, 105.58775, -67.877846, 45.251896, -113.12974, 0, -120.67172, -45.251896, -113.12974, -90.50379, -82.96181, -120.67172, -15.083965, -120.67172, 7.5419827, -113.12974, 37.709915, -90.50379, 82.96181, -45.251896, 113.12974, 15.083965, 120.67172, 82.96181, 90.50379, 98.04578, 75.41983, 60.33586, 52.793877, 30.16793, 82.96181, -22.625948, 82.96181, -75.41983, 45.251896, -82.96181, 7.5419827, -75.41983, -45.251896, -52.793877, -67.877846, -22.625948, -82.96181, 7.5419827, -82.96181, 37.709915, -67.877846, 60.33586, -45.251896, 90.50379, -22.625948, 82.96181, 15.083965, 67.877846, 37.709915)
