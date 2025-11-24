@@ -1,6 +1,6 @@
 extends CharacterBody2D
 class_name Player
-
+var invincible = false
 var speed = 60
 var hit = false
 @onready var health = $health.health
@@ -29,7 +29,22 @@ func _physics_process(delta: float) -> void:
 		velocity.y = move_toward(velocity.y,0,speed)
 		
 	move_and_slide()
+	
+func shield():
+	pass
 
+
+func piercing():
+	autoload.pierce = true
+	await get_tree().create_timer(4).timeout
+	autoload.pierce = false
+	
+func healtheal():
+	if self.health < 3:
+		$CanvasLayer
+		health += 1
+	else:
+		pass
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_released("click"):
 		autoload.group = false
@@ -37,7 +52,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 func player_hit():
 	if autoload.intials == false:
-		if hit == false:
+		if hit == false and invincible == false:
 			hit = true
 			health -= 1
 			healthy()

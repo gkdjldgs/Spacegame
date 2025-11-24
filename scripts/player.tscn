@@ -48,7 +48,6 @@ autostart = true
 layer = 4
 
 [node name="deathscreeen" parent="." instance=ExtResource("7_38am0")]
-process_mode = 3
 visible = false
 
 [node name="tptimer" type="Timer" parent="."]

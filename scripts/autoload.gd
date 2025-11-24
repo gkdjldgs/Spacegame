@@ -13,6 +13,7 @@ extends Node
 @onready var death = false
 @onready var highscore = 0
 @onready var wave = 1
+@onready var pierce = false
 signal bullet_fired(bullet, position, direction, group)
 
 func _process(delta: float) -> void:
